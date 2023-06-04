@@ -35,6 +35,8 @@ public class PilotoController {
     Piloto updatePiloto(@RequestBody Piloto newPiloto, @PathVariable Long id){
         return pilotoRepository.findById(id)
                 .map(piloto -> {
+                    piloto.setPais(newPiloto.getPais());
+                    piloto.setFoto(newPiloto.getFoto());
                     piloto.setNome(newPiloto.getNome());
                     piloto.setEquipe(newPiloto.getEquipe());
                     piloto.setVitorias(newPiloto.getVitorias());

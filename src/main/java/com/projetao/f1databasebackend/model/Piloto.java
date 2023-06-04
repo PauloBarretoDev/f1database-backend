@@ -10,12 +10,30 @@ public class Piloto {
     @Id
     @GeneratedValue
     private Long id;
+    private String pais;
+    private String foto;
     private String nome;
     private String equipe;
     private int vitorias;
 
+    public String getPais() {
+        return pais;
+    }
+
+    public void setPais(String pais) {
+        this.pais = pais;
+    }
+
     public Long getId() {
         return id;
+    }
+
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
     }
 
     public void setId(Long id) {
